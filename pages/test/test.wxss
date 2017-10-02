@@ -10,5 +10,28 @@ view::after	  在view组件后边插入内容
 view::before	在view组件前边插入内容 
 */
 
-/* CSS学习链接： */
+/* CSS学习链接： 
 
+http://www.cnblogs.com/yang-shuai/p/6899430.html 
+https://www.w3cschool.cn/css/css-tutorial.html
+*/
+
+.table {
+  display: flex;
+  border: 1px solid gray;
+}
+
+.table_head {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.th {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}

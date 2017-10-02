@@ -7,8 +7,11 @@ style：静态的样式统一写到class中。style接收动态的样式，在�
 class：用于指定样式规则，其属性值是样式规则中类选择器名(样式类名)的集合，样式类名不需要带上.，样式类名之间用空格分隔
 -->
 <view class='table'>
-  <view class='table_head' wx:for-items='{{week_list}}' >
-    {{item.weeks}}
+  <view class='table_head'>
+    <view></view>
+    <block wx:for-items='{{week_list}}'>
+      <view class='th'>{{item.weeks}}</view>
+    </block>
   </view>
   <view class='table_body '>
     <view class='time_schedule ' wx:for-items='{{time_list}} '>
