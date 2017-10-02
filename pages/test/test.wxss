@@ -1,0 +1,14 @@
+/* WXSS(WeiXin Style Sheets)是一套样式语言，用于描述WXML的组件样式，决定WXML的组件应该怎么显示 */
+
+/* 支持的选择器：
+
+.intro	      选择所有拥有class="intro"的组件
+#firstname	  选择拥有id="firstname"的组件
+view	        选择所有view组件
+view checkbox	选择所有文档的view组件和所有的checkbox组件
+view::after	  在view组件后边插入内容
+view::before	在view组件前边插入内容 
+*/
+
+/* CSS学习链接： */
+

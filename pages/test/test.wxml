@@ -1,0 +1,31 @@
+<!-- WXML(WeiXin Markup Language)是框架设计的一套标签语言，结合基础组件、事件系统，可以构建出页面的结构 -->
+<!-- 教程链接：https://www.w3cschool.cn/weixinapp/weixinapp-wxml.html -->
+
+<!-- 框架组件上支持使用style、class属性来控制组件的样式 -->
+<!-- 
+style：静态的样式统一写到class中。style接收动态的样式，在运行时会进行解析，请尽量避免将静态的样式写进style中，以免影响渲染速度 
+class：用于指定样式规则，其属性值是样式规则中类选择器名(样式类名)的集合，样式类名不需要带上.，样式类名之间用空格分隔
+-->
+<view class='table'>
+  <view class='table_head' wx:for-items='{{week_list}}' >
+    {{item.weeks}}
+  </view>
+  <view class='table_body '>
+    <view class='time_schedule ' wx:for-items='{{time_list}} '>
+      {{item.times}}
+    </view>
+    <view class='class_schedule '>
+      <template is='class_schedule_template ' data='{{class_schedule_one}} '></template>
+      <template is='class_schedule_template ' data='{{class_schedule_two}} '></template>
+      <template is='class_schedule_template ' data='{{class_schedule_three}} '></template>
+      <template is='class_schedule_template ' data='{{class_schedule_four}} '></template>
+      <template is='class_schedule_template ' data='{{class_schedule_five}} '></template>
+    </view>
+  </view>
+</view>
+
+<template name='class_schedule_template '>
+  <view wx:for-items='{{class_list}} ' bindtap='changeClass'>
+    {{item.class}}
+  </view>
+</template>
